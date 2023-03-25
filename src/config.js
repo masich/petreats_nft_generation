@@ -6,13 +6,14 @@ const network = NETWORK.eth;
 
 // General metadata for Ethereum
 const namePrefix = "Petreats NFT";
-const description = "Let's help pet shelters with crypto treats! ";
-const baseUri = "ipfs://NewUriToReplace";
+const description = "Let's help pet shelters with crypto treats!";
+const baseUri = "ipfs://bafybeictesspoqf3c4ocqwir6rlxuggcixgkqc3xhfpntbwwx6tq64diwm";
+const externalUrl = "https://www.petreats.dillsy.me";
 
 const solanaMetadata = {
-  symbol: "YC",
+  symbol: "PNFT",
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.petreats.dillsy.me",
+  external_url: externalUrl,
   creators: [
     {
       address: "",
@@ -24,7 +25,7 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5, // Collection size
+    growEditionSizeTo: 3 * 4 * 4 * 3 * 2, // Collection size
     layersOrder: [
       { name: "Background" },
       { name: "Outfit" },
@@ -40,8 +41,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 1024,
-  height: 1024,
+  width: 512,
+  height: 512,
   smoothing: false,
 };
 
@@ -76,7 +77,9 @@ const background = {
   default: "#000000",
 };
 
-const extraMetadata = {};
+const extraMetadata = {
+  "external_url": externalUrl,
+};
 
 const rarityDelimiter = "#";
 
